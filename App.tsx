@@ -6,8 +6,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
-      <Text>Test merge</Text>
+      <Text>Test merge git</Text>
       <Text>github</Text>
+      <Text>github1</Text>
       <StatusBar style="auto" />
     </View>
   );
