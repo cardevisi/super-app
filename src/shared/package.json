@@ -1,0 +1,10 @@
+{
+  "name": "@super-app/shared",
+  "version": "1.0.0",
+  "description": "Shared components",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Carlos Oliveira",
+  "license": "ISC"
+}
