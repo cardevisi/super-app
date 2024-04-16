@@ -1,10 +1,10 @@
-import { SquareCard } from '@super-app/shared';
+import { SquareButton } from '@super-app/shared';
 import { StyleSheet, View } from 'react-native';
 
 export default function Page() {
   return (
     <View style={styles.container}>
-      <SquareCard title="Crianças" />
+      <SquareButton title="Crianças" />
     </View>
   );
 }

@@ -1,1 +1,1 @@
-export { SquareCard } from './square-card';
+export { SquareButton } from './square-button';

@@ -1,2 +1,2 @@
 export { images } from './assets';
-export { SquareCard } from './components';
+export { SquareButton } from './components';

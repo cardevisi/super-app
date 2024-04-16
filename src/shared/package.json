@@ -6,5 +6,8 @@
     "test": "npm test"
   },
   "author": "Carlos Oliveira",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    
+  }
 }
