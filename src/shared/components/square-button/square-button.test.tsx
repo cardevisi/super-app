@@ -12,7 +12,7 @@ jest.mock('phosphor-react-native', () => {
 describe('SquareButton', () => {
   it('should render a square button with title', () => {
     const component = renderer.create(
-      <SquareButton title="Title" handleTouchable={() => {}} />
+      <SquareButton title="Title" onPress={() => {}} />
     );
     expect(component.root.findByType(Text).props.children).toBe('Title');
   });
@@ -20,10 +20,21 @@ describe('SquareButton', () => {
   it('should call handle touchable on press', () => {
     const handleTouchable = jest.fn();
     const component = renderer.create(
-      <SquareButton title="Title" handleTouchable={handleTouchable} />
+      <SquareButton title="Title" onPress={handleTouchable} />
     );
     const touchableOpacity = component.root.findByType(TouchableOpacity);
     touchableOpacity.props.onPress();
     expect(handleTouchable).toHaveBeenCalled();
+  });
+
+  it('should render children', () => {
+    const component = renderer.create(
+      <SquareButton title="Title" onPress={() => {}}>
+        <Text>Children Component</Text>
+      </SquareButton>
+    );
+    expect(component.root.findAllByType(Text)[0].props.children).toBe(
+      'Children Component'
+    );
   });
 });
