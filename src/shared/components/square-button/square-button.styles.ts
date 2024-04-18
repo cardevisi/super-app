@@ -15,9 +15,9 @@ const styles = StyleSheet.create({
   },
   title: {
     color: theme.colors.white,
-    fontSize: 24,
+    fontSize: 16,
     fontWeight: 'bold',
-    marginTop: 17,
+    marginTop: 16,
   },
 });
 
