@@ -1,19 +1,21 @@
 import { Baby } from 'phosphor-react-native';
-import React from 'react';
+import React, { Children } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
 import styles from './square-button.styles';
 
 function SquareButton({
   title,
-  handleTouchable,
+  onPress,
+  children,
 }: {
   title: string;
-  handleTouchable: () => void;
+  onPress: () => void;
+  children?: React.ReactNode;
 }) {
   return (
-    <TouchableOpacity onPress={handleTouchable} style={styles.container}>
-      <Baby size={62} />
+    <TouchableOpacity onPress={onPress} style={styles.container}>
+      <View>{children}</View>
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
