@@ -1,8 +1,9 @@
 export const fonts = {
   family: {
-    regular: 'Poppins_400Regular',
-    medium: 'Poppins_500Medium',
-    bold: 'Poppins_700Bold',
+    regular: 'InterRegular',
+    medium: 'InterMedium',
+    semiBold: 'InterSemiBold',
+    bold: 'InterBold',
   },
 
   size: {

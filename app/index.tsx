@@ -1,13 +1,32 @@
+import {
+  Inter_400Regular,
+  Inter_500Medium,
+  Inter_600SemiBold,
+  Inter_700Bold,
+} from '@expo-google-fonts/inter';
 import { SquareButton } from '@super-app/shared';
+import { useFonts } from 'expo-font';
 import { Baby, CalendarCheck, HandCoins } from 'phosphor-react-native';
-import { StyleSheet, View } from 'react-native';
 
+import { StyleSheet, View } from 'react-native';
 import { theme } from '../src/theme';
 
 export default function Page() {
+  const [fontsLoaded] = useFonts({
+    InterRegular: Inter_400Regular,
+    InterMedium: Inter_500Medium,
+    InterSemiBold: Inter_600SemiBold,
+    InterBold: Inter_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   const iconProps = {
     size: 62,
     color: 'black',
+    weight='bold'
   };
 
   return (
@@ -27,7 +46,7 @@ export default function Page() {
           <CalendarCheck {...iconProps} />
         </SquareButton>
       </View>
-    </View>
+     </View>
   );
 }
 
