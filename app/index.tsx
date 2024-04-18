@@ -6,9 +6,14 @@ import {
 } from '@expo-google-fonts/inter';
 import { SquareButton } from '@super-app/shared';
 import { useFonts } from 'expo-font';
-import { Baby, CalendarCheck, HandCoins } from 'phosphor-react-native';
-
+import {
+  Baby,
+  CalendarCheck,
+  HandCoins,
+  IconProps,
+} from 'phosphor-react-native';
 import { StyleSheet, View } from 'react-native';
+
 import { theme } from '../src/theme';
 
 export default function Page() {
@@ -26,8 +31,8 @@ export default function Page() {
   const iconProps = {
     size: 62,
     color: 'black',
-    weight='bold'
-  };
+    weight: 'bold',
+  } as IconProps;
 
   return (
     <View style={styles.container}>
@@ -46,7 +51,7 @@ export default function Page() {
           <CalendarCheck {...iconProps} />
         </SquareButton>
       </View>
-     </View>
+    </View>
   );
 }
 
