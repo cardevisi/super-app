@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 17,
+    fontFamily: theme.fonts.family.semiBold,
   },
 });
 
