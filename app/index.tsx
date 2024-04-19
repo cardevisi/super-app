@@ -4,7 +4,7 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
-import { SquareButton } from '@super-app/shared';
+import { SquareButton, Card } from '@super-app/shared';
 import { useFonts } from 'expo-font';
 import {
   Baby,
@@ -14,6 +14,7 @@ import {
 } from 'phosphor-react-native';
 import { StyleSheet, View } from 'react-native';
 
+import { images } from '../src/shared/assets';
 import { theme } from '../src/theme';
 
 export default function Page() {
@@ -50,6 +51,17 @@ export default function Page() {
         <SquareButton title="Confirmar Presença" onPress={() => {}}>
           <CalendarCheck {...iconProps} />
         </SquareButton>
+      </View>
+      <View style={{ width: '100%' }}>
+        <Card
+          image={images.childImage}
+          name="Angela Bower"
+          age={2}
+          identity="R6890000"
+          onPress={() => {}}
+          payment="paid"
+          situation="active"
+        />
       </View>
     </View>
   );
