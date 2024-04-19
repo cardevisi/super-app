@@ -4,7 +4,10 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
+
 import { SquareButton, Card } from '@super-app/shared';
+import SearchBar from '@super-app/shared/components/search-bar/search-bar';
+
 import { useFonts } from 'expo-font';
 import {
   Baby,
@@ -12,6 +15,7 @@ import {
   HandCoins,
   IconProps,
 } from 'phosphor-react-native';
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { images } from '../src/shared/assets';
@@ -53,6 +57,12 @@ export default function Page() {
         </SquareButton>
       </View>
       <View style={{ width: '100%' }}>
+        <SearchBar
+          placeholder="Pesquisar"
+          onPress={(inpuTextValue) => {
+            console.log(inpuTextValue);
+          }}
+        />
         <Card
           image={images.childImage}
           name="Angela Bower"
