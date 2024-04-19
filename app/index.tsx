@@ -4,8 +4,10 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
-import { SquareButton } from '@super-app/shared';
+
+import { SquareButton, Card } from '@super-app/shared';
 import SearchBar from '@super-app/shared/components/search-bar/search-bar';
+
 import { useFonts } from 'expo-font';
 import {
   Baby,
@@ -16,6 +18,7 @@ import {
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
+import { images } from '../src/shared/assets';
 import { theme } from '../src/theme';
 
 export default function Page() {
@@ -59,6 +62,15 @@ export default function Page() {
           onPress={(inpuTextValue) => {
             console.log(inpuTextValue);
           }}
+        />
+        <Card
+          image={images.childImage}
+          name="Angela Bower"
+          age={2}
+          identity="R6890000"
+          onPress={() => {}}
+          payment="paid"
+          situation="active"
         />
       </View>
     </View>
