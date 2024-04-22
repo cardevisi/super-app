@@ -2,14 +2,9 @@ import React from 'react';
 import { Text, TextInput, View } from 'react-native';
 
 import styles from './custom-text-input.style';
+import CustomTextInputProps from './custom-text-input.type';
 
-function CustomTextInput({
-  label,
-  placeholder,
-}: {
-  label?: string;
-  placeholder?: string;
-}) {
+function CustomTextInput({ label, placeholder }: CustomTextInputProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
