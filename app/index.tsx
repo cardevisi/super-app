@@ -5,6 +5,7 @@ import {
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
 import { SquareButton, Card } from '@super-app/shared';
+import { TextInput } from '@super-app/shared/components/custom-text-input';
 import SearchBar from '@super-app/shared/components/search-bar/search-bar';
 import { useFonts } from 'expo-font';
 import {
@@ -55,6 +56,12 @@ export default function Page() {
         </SquareButton>
       </View>
       <View style={{ width: '100%' }}>
+        <View style={{ marginBottom: 16 }}>
+          <TextInput label="Email" placeholder="email" />
+        </View>
+        <View style={{ marginBottom: 16 }}>
+          <TextInput label="Password" placeholder="password" />
+        </View>
         <SearchBar
           placeholder="Pesquisar"
           onPress={(inpuTextValue) => {
