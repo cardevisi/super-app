@@ -1,2 +1,8 @@
 export { SquareButton } from './square-button';
-export { Card } from './card';
+export { Card, CardProps } from './card';
+export {
+  TextWithLabel,
+  TextWithLabelProps,
+  TextOneLine,
+  TextOneLineProps,
+} from './text-with-label';

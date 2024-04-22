@@ -4,4 +4,7 @@ export const colors = {
   bg_primary: '#023047',
   bg_secondary: '#219EBC',
   color_b1: '#C8C8C8',
+  success: '#25CF4B',
+  warning: '#F98113',
+  error: '#FD3205',
 };

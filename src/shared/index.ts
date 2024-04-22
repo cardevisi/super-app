@@ -1,2 +1,2 @@
 export { images } from './assets';
-export { SquareButton, Card } from './components';
+export { SquareButton, Card, TextWithLabel, TextOneLine } from './components';

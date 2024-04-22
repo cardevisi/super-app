@@ -4,10 +4,8 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
-
 import { SquareButton, Card } from '@super-app/shared';
 import SearchBar from '@super-app/shared/components/search-bar/search-bar';
-
 import { useFonts } from 'expo-font';
 import {
   Baby,
