@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { Text } from 'react-native';
 
 import styles from './text-one-line.styles';
