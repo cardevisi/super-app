@@ -1,9 +1,10 @@
-import { Image, Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import renderer from 'react-test-renderer';
 
 import { Card } from './card';
 import { images } from '../../assets';
 import { TextWithLabel, TextOneLine } from '../text-with-label';
+import { UserImage } from '../user-image';
 describe('Card', () => {
   it('should render image from user', () => {
     const component = renderer.create(
@@ -18,7 +19,7 @@ describe('Card', () => {
       />
     );
     const testInstance = component.root;
-    expect(testInstance.findByType(Image).props.source).toBeTruthy();
+    expect(testInstance.findByType(UserImage).props.source).toBeTruthy();
   });
 
   it('should render name from user', () => {

@@ -56,6 +56,15 @@ export default function Page() {
         </SquareButton>
       </View>
       <View style={{ width: '100%' }}>
+        <Card
+          image={images.childImage}
+          name="Angela Bower"
+          age={2}
+          identity="R6890000"
+          onPress={() => {}}
+          payment="paid"
+          situation="active"
+        />
         <View style={{ marginBottom: 16 }}>
           <TextInput label="Email" placeholder="email" />
         </View>
@@ -67,15 +76,6 @@ export default function Page() {
           onPress={(inpuTextValue) => {
             console.log(inpuTextValue);
           }}
-        />
-        <Card
-          image={images.childImage}
-          name="Angela Bower"
-          age={2}
-          identity="R6890000"
-          onPress={() => {}}
-          payment="paid"
-          situation="active"
         />
       </View>
     </View>

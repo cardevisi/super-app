@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
     gap: 20,
     paddingTop: 18,
     paddingRight: 18,
-    paddingBottom: 32,
+    paddingBottom: 18,
     paddingLeft: 18,
     backgroundColor: theme.colors.white,
-    borderRadius: theme.borderRadius.md,
+    borderRadius: theme.borderRadius.sm,
     marginTop: 20,
   },
   title: {

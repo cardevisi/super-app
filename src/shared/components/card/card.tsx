@@ -1,9 +1,10 @@
 import { memo } from 'react';
-import { TouchableOpacity, Image, Text, View } from 'react-native';
+import { TouchableOpacity, Text, View } from 'react-native';
 
 import styles from './card.styles';
 import { CardProps } from './card.types';
 import { TextWithLabel, TextOneLine } from '../text-with-label';
+import { UserImage } from '../user-image';
 
 const PAYMENT = { paid: 'PAGO', pending: 'PEND' };
 const SITUATION = { active: 'ATIVO', inactive: 'INATIVO' };
@@ -20,13 +21,12 @@ const CardBase = ({
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
       <View>
-        <Image
-          source={image}
-          style={{ borderRadius: 24, width: 82, height: 82 }}
-        />
+        <UserImage source={image} type="medium" />
       </View>
       <View style={{ flex: 1 }}>
-        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.title} numberOfLines={1} ellipsizeMode="tail">
+          {name}
+        </Text>
         <TextWithLabel label="idade">
           <TextOneLine>{age} anos</TextOneLine>
         </TextWithLabel>
