@@ -6,3 +6,4 @@ export {
   TextOneLine,
   TextOneLineProps,
 } from './text-with-label';
+export { UserImage, UserImageProps } from './user-image';
