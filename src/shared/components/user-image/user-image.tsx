@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { Image } from 'react-native';
 
 import styles from './user-image.styles';
@@ -15,4 +14,4 @@ const UserImageBase = ({
   return <Image source={source} style={allStyles} />;
 };
 
-export const UserImage = memo(UserImageBase);
+export const UserImage = UserImageBase;
