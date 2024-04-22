@@ -13,4 +13,4 @@ const TextWithLabelBase = ({ label, children }: TextWithLabelProps) => {
   );
 };
 
-export const TextWithLabel = memo(TextWithLabelBase);
+export const TextWithLabel = TextWithLabelBase;

@@ -13,10 +13,12 @@ const styles = StyleSheet.create({
     paddingLeft: 18,
     backgroundColor: theme.colors.white,
     borderRadius: theme.borderRadius.md,
+    marginTop: 20,
   },
   title: {
     fontFamily: theme.fonts.family.bold,
     fontSize: 20,
+    marginBottom: 10,
   },
 });
 

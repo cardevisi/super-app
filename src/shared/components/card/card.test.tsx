@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 
 import { Card } from './card';
 import { images } from '../../assets';
+import { TextWithLabel, TextOneLine } from '../text-with-label';
 describe('Card', () => {
   it('should render image from user', () => {
     const component = renderer.create(
@@ -38,6 +39,24 @@ describe('Card', () => {
     );
   });
 
+  it('should render label for age from user', () => {
+    const component = renderer.create(
+      <Card
+        image={images.childImage}
+        age={2}
+        identity="30494949"
+        name="Angela Bower"
+        onPress={() => {}}
+        payment="paid"
+        situation="active"
+      />
+    );
+    const testInstance = component.root;
+    expect(testInstance.findAllByType(TextWithLabel)[0].props.label).toBe(
+      'idade'
+    );
+  });
+
   it('should render age from user', () => {
     const component = renderer.create(
       <Card
@@ -51,7 +70,28 @@ describe('Card', () => {
       />
     );
     const testInstance = component.root;
-    expect(testInstance.findAllByType(Text)[1].props.children).toBe(2);
+    expect(testInstance.findAllByType(TextOneLine)[0].props.children).toEqual([
+      2,
+      ' anos',
+    ]);
+  });
+
+  it('should render label for identity from user', () => {
+    const component = renderer.create(
+      <Card
+        image={images.childImage}
+        age={2}
+        identity="30494949"
+        name="Angela Bower"
+        onPress={() => {}}
+        payment="paid"
+        situation="active"
+      />
+    );
+    const testInstance = component.root;
+    expect(testInstance.findAllByType(TextWithLabel)[1].props.label).toBe(
+      'identidade'
+    );
   });
 
   it('should render identity from user', () => {
@@ -67,7 +107,27 @@ describe('Card', () => {
       />
     );
     const testInstance = component.root;
-    expect(testInstance.findAllByType(Text)[2].props.children).toBe('30494949');
+    expect(testInstance.findAllByType(TextOneLine)[1].props.children).toEqual(
+      '30494949'
+    );
+  });
+
+  it('should render label for situation from user', () => {
+    const component = renderer.create(
+      <Card
+        image={images.childImage}
+        age={2}
+        identity="30494949"
+        name="Angela Bower"
+        onPress={() => {}}
+        payment="paid"
+        situation="active"
+      />
+    );
+    const testInstance = component.root;
+    expect(testInstance.findAllByType(TextWithLabel)[2].props.label).toBe(
+      'situação'
+    );
   });
 
   it('should render situation from user', () => {
@@ -83,7 +143,11 @@ describe('Card', () => {
       />
     );
     const testInstance = component.root;
-    expect(testInstance.findAllByType(Text)[3].props.children).toBe('active');
+    expect(testInstance.findAllByType(TextOneLine)[2].props.children).toEqual([
+      'ATIVO',
+      '/',
+      'PAGO',
+    ]);
   });
 
   it('should render payment from user', () => {
@@ -94,12 +158,16 @@ describe('Card', () => {
         identity="30494949"
         name="Angela Bower"
         onPress={() => {}}
-        payment="paid"
+        payment="pending"
         situation="active"
       />
     );
     const testInstance = component.root;
-    expect(testInstance.findAllByType(Text)[4].props.children).toBe('paid');
+    expect(testInstance.findAllByType(TextOneLine)[2].props.children).toEqual([
+      'ATIVO',
+      '/',
+      'PEND',
+    ]);
   });
 
   it('should call handle touchable on press', () => {
