@@ -14,4 +14,4 @@ const TextOneLineBase = ({ type = 'default', children }: TextOneLineProps) => {
   );
 };
 
-export const TextOneLine = memo(TextOneLineBase);
+export const TextOneLine = TextOneLineBase;

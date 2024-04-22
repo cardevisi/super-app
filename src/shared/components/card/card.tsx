@@ -3,6 +3,10 @@ import { TouchableOpacity, Image, Text, View } from 'react-native';
 
 import styles from './card.styles';
 import { CardProps } from './card.types';
+import { TextWithLabel, TextOneLine } from '../text-with-label';
+
+const PAYMENT = { paid: 'PAGO', pending: 'PEND' };
+const SITUATION = { active: 'ATIVO', inactive: 'INATIVO' };
 
 const CardBase = ({
   image,
@@ -23,10 +27,17 @@ const CardBase = ({
       </View>
       <View style={{ flex: 1 }}>
         <Text style={styles.title}>{name}</Text>
-        <Text style={{ fontSize: 14 }}>{age}</Text>
-        <Text style={{ fontSize: 14 }}>{identity}</Text>
-        <Text style={{ fontSize: 14 }}>{situation}</Text>
-        <Text style={{ fontSize: 14 }}>{payment}</Text>
+        <TextWithLabel label="idade">
+          <TextOneLine>{age} anos</TextOneLine>
+        </TextWithLabel>
+        <TextWithLabel label="identidade">
+          <TextOneLine>{identity}</TextOneLine>
+        </TextWithLabel>
+        <TextWithLabel label="situação">
+          <TextOneLine type="success">
+            {SITUATION[situation]}/{PAYMENT[payment]}
+          </TextOneLine>
+        </TextWithLabel>
       </View>
     </TouchableOpacity>
   );
