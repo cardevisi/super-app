@@ -5,9 +5,11 @@ import {
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
 import { SquareButton, Card } from '@super-app/shared';
+import { images } from '@super-app/shared/assets';
 import { TextInput } from '@super-app/shared/components/custom-text-input';
 import SearchBar from '@super-app/shared/components/search-bar/search-bar';
 import { useFonts } from 'expo-font';
+import { router } from 'expo-router';
 import {
   Baby,
   CalendarCheck,
@@ -17,8 +19,7 @@ import {
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { images } from '../src/shared/assets';
-import { theme } from '../src/theme';
+import { theme } from '../../theme';
 
 export default function Page() {
   const [fontsLoaded] = useFonts({
@@ -41,12 +42,20 @@ export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.box}>
-        <SquareButton title="Crianças" onPress={() => {}}>
+        <SquareButton
+          title="Crianças"
+          onPress={() => {
+            router.navigate('/children');
+          }}>
           <Baby {...iconProps} />
         </SquareButton>
       </View>
       <View style={styles.box}>
-        <SquareButton title="Pagamentos" onPress={() => {}}>
+        <SquareButton
+          title="Pagamentos"
+          onPress={() => {
+            router.navigate('/payments');
+          }}>
           <HandCoins {...iconProps} />
         </SquareButton>
       </View>
