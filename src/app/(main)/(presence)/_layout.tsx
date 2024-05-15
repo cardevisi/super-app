@@ -1,8 +1,11 @@
 import SearchBar from '@super-app/shared/components/search-bar/search-bar';
-import { Link, Slot } from 'expo-router';
+import { Slot, useNavigation } from 'expo-router';
 import { View } from 'react-native';
 
+import { Button } from '@/shared';
+
 export default function PresenceLayout() {
+  const navigator = useNavigation();
   return (
     <View>
       <SearchBar
@@ -13,8 +16,22 @@ export default function PresenceLayout() {
       />
       <View
         style={{ display: 'flex', flexDirection: 'row', gap: 10, padding: 15 }}>
-        <Link href="/confirmed">CONFIRMADOS</Link>
-        <Link href="/to-confirm">A CONFIRMAR</Link>
+        <Button
+          label="CONFIRMADOS"
+          variant="outlined"
+          icon="check"
+          onPress={() => {
+            navigator.navigate('confirmed');
+          }}
+        />
+        <Button
+          label="A CONFIRMAR"
+          variant="primary"
+          icon="plus"
+          onPress={() => {
+            navigator.navigate('to-confirm');
+          }}
+        />
       </View>
       <Slot />
     </View>

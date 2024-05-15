@@ -5,4 +5,5 @@ export {
   TextWithLabel,
   TextOneLine,
   UserImage,
+  Button,
 } from './components';
